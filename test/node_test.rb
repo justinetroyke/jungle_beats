@@ -19,7 +19,7 @@ class NodeTest < Minitest::Test
     assert_equal "plop", node.data
   end
 
-  def test_that_next_node_exists
+  def test_that_next_node_exists_with_nil
     node = Node.new("plop")
 
     assert_equal nil, node.next_node
