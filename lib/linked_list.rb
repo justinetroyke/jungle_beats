@@ -5,8 +5,7 @@ class LinkedList
 
   def initialize
     @head = nil
-    @node = nil
-    @count = 0
+    @count = 1
   end
 
   def append(new_data)
