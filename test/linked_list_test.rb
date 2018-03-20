@@ -26,4 +26,10 @@ class LinkedListTest < Minitest::Test
 
     assert_nil list.head.next_node
   end
+
+  def test_count_gives_number_of_nodes
+    list = LinkedList.new
+
+    assert_equal 1, list.count
+  end
 end
