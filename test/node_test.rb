@@ -23,7 +23,7 @@ class NodeTest < Minitest::Test
   def test_that_next_node_exists_with_nil
     node = Node.new("plop")
 
-    assert_equal nil, node.next_node
+    assert_instance_of NullNode, node.next_node
   end
 
   def test_it_can_count_itself

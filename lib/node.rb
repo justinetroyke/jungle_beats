@@ -15,5 +15,11 @@ attr_accessor :next_node
   def append(sound)
     @next_node.append(sound)
   end
+  def to_string(formatting = '')
+    formatting + sound + next_node.to_string(' ')
+  end
+
+  private
+  attr_reader :sound
 
 end

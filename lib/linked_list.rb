@@ -11,6 +11,5 @@ class LinkedList
     sound
   end
 
-  def count
 
 end
