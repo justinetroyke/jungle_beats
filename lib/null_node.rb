@@ -18,4 +18,9 @@ class NullNode
   def next_node
     self
   end
-end 
+  
+  def to_string(_formatting = '')
+    ""
+  end
+
+end

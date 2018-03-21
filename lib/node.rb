@@ -1,7 +1,7 @@
 class Node
 
 attr_accessor :next_node
-
+attr_reader :sound
 
   def initialize(sound)
     @sound = sound
@@ -18,8 +18,4 @@ attr_accessor :next_node
   def to_string(formatting = '')
     formatting + sound + next_node.to_string(' ')
   end
-
-  private
-  attr_reader :sound
-
 end

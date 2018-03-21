@@ -11,5 +11,16 @@ class LinkedList
     sound
   end
 
+  def count
+    @head.count
+  end
+
+  def next_node=(setter)
+    @head = setter
+  end
+
+  def to_string
+    @head.to_string
+  end
 
 end
