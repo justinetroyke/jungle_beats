@@ -1,21 +1,16 @@
 class LinkedList
 
-  attr_reader :head
-  attr_accessor :count
+  attr_accessor :head
 
   def initialize
-    @head = nil
-    @count = 1
+    @head = NullNode.new(self)
   end
 
-  def append(new_data)
-    if @head == nil
-      @head = Node.new(new_data)
-      @count += 1
-    else
-      @head.next_node = Node.new(new_data)
-      @count += 1
-    end
-    new_data
+  def append(sound)
+    @head.append(sound)
+    sound
   end
+
+  def count
+
 end
