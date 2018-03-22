@@ -69,6 +69,24 @@ class LinkedListTest < Minitest::Test
     assert_equal "doop boop", list.to_string
   end
 
+  def test_inesrt_method_for_index_1
+    list = LinkedList.new
+    list.append("dop")
+    list.append("plop")
+    list.append("suu")
+
+    assert_equal "woo", list.insert(1, "woo")
+  end
+
+  def test_that_insert_returns_the_correct_string
+    list = LinkedList.new
+    list.append("dop")
+    list.append("plop")
+    list.append("suu")
+    list.insert(1, "woo")
+
+    assert_equal "dop woo plop suu", list.to_string 
+  end
   def test_it_can_add_new_head_to_list
     list = LinkedList.new
     list.append("plop")
@@ -84,6 +102,6 @@ class LinkedListTest < Minitest::Test
     list.prepend("dop")
 
     assert_equal 3, list.count
-    assert_equal "dop plop suu", list.to_string 
+    assert_equal "dop plop suu", list.to_string
   end
 end

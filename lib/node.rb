@@ -28,5 +28,6 @@ attr_reader :sound
       new_index = index -1
       next_node.insert(new_index, sound)
     end
+    sound 
   end
 end
