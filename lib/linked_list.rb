@@ -40,6 +40,17 @@ class LinkedList
     insert(0, sound)
     sound
   end
+
+  def find(index, number_of_strings)
+    if count == 1
+      @head.find(index, number_of_strings)
+    elsif index == 0
+      @head.find(index, number_of_strings)
+    else
+      new_index = index -1
+      @head.find(index, number_of_strings)
+    end 
+  end
   #  [ z a, b, c, d, null_node
    # list.insert(1, z)
    # list => head.insert(3-1)

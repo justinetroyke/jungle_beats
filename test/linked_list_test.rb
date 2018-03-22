@@ -85,7 +85,7 @@ class LinkedListTest < Minitest::Test
     list.append("suu")
     list.insert(1, "woo")
 
-    assert_equal "dop woo plop suu", list.to_string 
+    assert_equal "dop woo plop suu", list.to_string
   end
   def test_it_can_add_new_head_to_list
     list = LinkedList.new
@@ -103,5 +103,23 @@ class LinkedListTest < Minitest::Test
 
     assert_equal 3, list.count
     assert_equal "dop plop suu", list.to_string
+  end
+
+  def test_find_returns_string_at_that_index_0
+    list = LinkedList.new
+    list.append("deep")
+
+    assert_equal "deep", list.find(0, 1)
+  end
+
+  def test_find_returns_string_at_index_with_3_sounds
+    list = LinkedList.new
+    list.append("deep")
+    list.append("woo")
+    list.append("shi")
+    list.append("shu")
+    list.append("blop")
+
+    assert_equal "shi", list.find(2, 1)
   end
 end

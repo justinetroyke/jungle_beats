@@ -28,6 +28,15 @@ attr_reader :sound
       new_index = index -1
       next_node.insert(new_index, sound)
     end
-    sound 
+    sound
+  end
+
+  def find(index, number_of_strings)
+    if index == 0
+      number_of_strings = 1
+      self.sound
+    end
+    # new_index = index - 1
+    # @node.sound.to_string
   end
 end
