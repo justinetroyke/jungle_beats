@@ -22,4 +22,5 @@ class NullNode
   def to_string(_formatting = '')
     ""
   end
+
 end

@@ -23,9 +23,21 @@ class LinkedList
     @head.to_string
   end
 
+  def insert(index, sound)
+    if count == 0
+      append(sound)
+    else if
+      @head.insert(index, sound)
+    end
+    #
+  end
+
   def prepend(sound)
-    @head.prepend(sound)
+    insert(0, sound)
     sound
   end
+  # [ a, b, c]
+  # [ 3, 2, 1]
+  # [ 0, 1, 2]
 
 end

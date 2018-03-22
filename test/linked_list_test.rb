@@ -52,7 +52,25 @@ class LinkedListTest < Minitest::Test
     assert_equal "doop deep", list.to_string
   end
 
+  def test_insert_enters_at_index_0
+    list = LinkedList.new
+    list.insert(0, "boop")
+
+    assert_equal 1, list.count
+    assert_equal "boop", list.to_string
+  end
+
+  def test_insert_enters_at_index_0_with_exisitng_node
+    list = LinkedList.new
+    list.insert(0, "boop")
+    list.insert(0, "doop")
+
+    assert_equal 2, list.count
+    assert_equal "doop boop", list.to_string
+  end
+
   def test_it_can_add_new_head_to_list
+    skip
     list = LinkedList.new
     list.append("plop")
     list.append("suu")
@@ -61,6 +79,7 @@ class LinkedListTest < Minitest::Test
   end
 
   def test_count_after_prepending
+    skip
     list = LinkedList.new
     list.append("plop")
     list.append("suu")

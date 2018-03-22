@@ -19,7 +19,21 @@ attr_reader :sound
     formatting + sound + next_node.to_string(' ')
   end
 
-  def prepend(sound)
-    self + next_node.prepend
+  def insert(index, sound)
+    if index == 0
+      new_node = Node.new(sound)
+      new_node.next_node = next_node
+      self.next_node = new_node
+    else
+      new_index = index -1
+      next_node.insert(new_index, sound)
+    end
+
+  #  [ a, b, c, z d, null_node
+   # list.insert(3, z)
+   # list => head.insert(3-1)
+   # a => head { next_node.insert(2-1) }
+   # next_node[b] => { next_node.insert(1-1)}
+   # next_node[c] => { insert(0)}{}
   end
 end
