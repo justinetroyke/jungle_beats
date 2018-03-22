@@ -28,12 +28,5 @@ attr_reader :sound
       new_index = index -1
       next_node.insert(new_index, sound)
     end
-
-  #  [ a, b, c, z d, null_node
-   # list.insert(3, z)
-   # list => head.insert(3-1)
-   # a => head { next_node.insert(2-1) }
-   # next_node[b] => { next_node.insert(1-1)}
-   # next_node[c] => { insert(0)}{}
   end
 end

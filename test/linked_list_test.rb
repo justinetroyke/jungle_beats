@@ -70,7 +70,6 @@ class LinkedListTest < Minitest::Test
   end
 
   def test_it_can_add_new_head_to_list
-    skip
     list = LinkedList.new
     list.append("plop")
     list.append("suu")
@@ -79,12 +78,12 @@ class LinkedListTest < Minitest::Test
   end
 
   def test_count_after_prepending
-    skip
     list = LinkedList.new
     list.append("plop")
     list.append("suu")
     list.prepend("dop")
 
     assert_equal 3, list.count
+    assert_equal "dop plop suu", list.to_string 
   end
 end

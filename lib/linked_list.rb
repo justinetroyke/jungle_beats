@@ -26,16 +26,27 @@ class LinkedList
   def insert(index, sound)
     if count == 0
       append(sound)
-    else if
-      @head.insert(index, sound)
+    elsif index == 0
+      new_node = Node.new(sound)
+      new_node.next_node = @head
+      @head = new_node
+    else
+      new_index = index -1
+      @head.insert(new_index, sound)
     end
-    #
   end
 
   def prepend(sound)
     insert(0, sound)
     sound
   end
+  #  [ z a, b, c, d, null_node
+   # list.insert(1, z)
+   # list => head.insert(3-1)
+   # a => head { next_node.insert(2-1) }
+   # next_node[b] => { next_node.insert(1-1)}
+   # next_node[c] => { insert(0)}{}
+
   # [ a, b, c]
   # [ 3, 2, 1]
   # [ 0, 1, 2]
