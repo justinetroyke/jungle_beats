@@ -51,4 +51,12 @@ class LinkedListTest < Minitest::Test
 
     assert_equal "doop deep", list.to_string
   end
+
+  def test_it_can_add_new_head_to_list
+    list = LinkedList.new
+    list.append("plop")
+    list.append("suu")
+
+    assert_equal "dop", list.prepend("dop")
+  end
 end
