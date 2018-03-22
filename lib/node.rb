@@ -35,8 +35,9 @@ attr_reader :sound
     if index == 0
       number_of_strings = 1
       self.sound
+    else
+      new_index = index -1
+      next_node.sound
     end
-    # new_index = index - 1
-    # @node.sound.to_string
   end
 end

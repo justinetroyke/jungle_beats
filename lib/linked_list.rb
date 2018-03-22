@@ -45,11 +45,11 @@ class LinkedList
     if count == 1
       @head.find(index, number_of_strings)
     elsif index == 0
-      @head.find(index, number_of_strings)
+      new_to_string = next_node.data
     else
       new_index = index -1
       @head.find(index, number_of_strings)
-    end 
+    end
   end
   #  [ z a, b, c, d, null_node
    # list.insert(1, z)
