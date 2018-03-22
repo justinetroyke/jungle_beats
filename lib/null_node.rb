@@ -23,4 +23,7 @@ class NullNode
     ""
   end
 
+  def find(index, number_of_strings)
+  
+  end
 end
