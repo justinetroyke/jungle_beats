@@ -59,4 +59,13 @@ class LinkedListTest < Minitest::Test
 
     assert_equal "dop", list.prepend("dop")
   end
+
+  def test_count_after_prepending
+    list = LinkedList.new
+    list.append("plop")
+    list.append("suu")
+    list.prepend("dop")
+
+    assert_equal 3, list.count
+  end
 end

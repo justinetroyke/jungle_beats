@@ -18,4 +18,8 @@ attr_reader :sound
   def to_string(formatting = '')
     formatting + sound + next_node.to_string(' ')
   end
+
+  def prepend(sound)
+    self + next_node.prepend
+  end
 end

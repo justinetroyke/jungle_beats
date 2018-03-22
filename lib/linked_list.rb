@@ -23,4 +23,9 @@ class LinkedList
     @head.to_string
   end
 
+  def prepend(sound)
+    @head.prepend(sound)
+    sound
+  end
+
 end
